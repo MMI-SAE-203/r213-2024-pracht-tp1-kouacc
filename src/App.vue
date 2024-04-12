@@ -17,7 +17,7 @@ const menuIsOpen = ref(false)
     </button>
     <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
     <nav id="mainNav">
-      <ul>
+      <ul v-show="menuIsOpen">
         <li><a href="#">item 1</a></li>
         <li><a href="#">item 2</a></li>
         <li><a href="#">item 3</a></li>
