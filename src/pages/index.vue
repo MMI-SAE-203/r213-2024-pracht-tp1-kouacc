@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 const sectionOpen = ref(1)
-const sectionOpenData = ref()
+const sectionOpenData = ref(0)
 
 const sectionsData = [
   {
@@ -58,7 +58,7 @@ const sectionsData = [
     </p>
   </section>
   <section v-for="({ label, texte }, key) of sectionsData" :v-key="key">
-    <button class="text-xl" @pointerdown="sectionOpenData = key">{{ label }}</button>
+    <button class="text-xl" @pointerdown="sectionOpenData = key">{{ label }} (data json)</button>
     <section v-show="sectionOpenData === key">
       <pre class="font-mono">key : {{ key }}</pre>
       <pre class="font-mono">label : {{ label }}</pre>
